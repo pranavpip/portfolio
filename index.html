@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVSSPRANAV - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        .section-title {
+            @apply text-4xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out;
+        }
+        .project-card {
+            @apply bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col;
+        }
+        .btn {
+            @apply inline-block bg-blue-600 text-white font-semibold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors duration-300 ease-in-out shadow-md;
+        }
+
+        /* Custom Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+
+        /* Delay for sequential animations */
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">PVSSPRANAV</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
+                <li><a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors">Education</a></li>
+                <li><a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
+                <li><a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a></li>
+                <li><a href="#achievements" class="text-gray-600 hover:text-blue-600 transition-colors">Achievements</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button (if needed) - Add JS for functionality -->
+            <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero/About Section -->
+        <section id="about" class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 md:py-32 text-center rounded-b-3xl shadow-xl overflow-hidden">
+            <div class="container flex flex-col items-center justify-center">
+                <!-- Profile Image Placeholder -->
+                <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/160x160/cccccc/333333?text=PP" alt="Profile Picture" class="rounded-full w-full h-full object-cover">
+                    <!-- Replace with your actual profile image URL -->
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">PVSSPRANAV</h1>
+                <p class="text-xl md:text-2xl mb-8 animate-fade-in-up animate-delay-200">
+                    Passionate Computer Science Student | Aspiring AI/ML Engineer
+                </p>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in animate-delay-400">
+                    Driven by a curiosity for cutting-edge technologies, I specialize in building intelligent systems and robust web applications. Let's connect and innovate!
+                </p>
+                <div class="flex justify-center space-x-4 animate-fade-in-up animate-delay-600">
+                    <a href="https://linkedin.com/in/pranav-pullepu" target="_blank" class="btn bg-white text-blue-600 hover:bg-gray-100">
+                        <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/pranavpip" target="_blank" class="btn bg-white text-gray-800 hover:bg-gray-100">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 bg-gray-50">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card transform hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Bachelor of Technology in Computer Science</h3>
+                        <p class="text-lg text-gray-600">Keshav Memorial Institute of Technology</p>
+                        <p class="text-md text-gray-500">June 2025 | Hyderabad, India</p>
+                        <p class="text-md text-gray-700 mt-2">CGPA: 7.8</p>
+                    </div>
+                    <div class="card transform hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Senior Secondary School</h3>
+                        <p class="text-lg text-gray-600">Sri Chaitanya Junior College</p>
+                        <p class="text-md text-gray-500">May 2021 | Hyderabad, India</p>
+                        <p class="text-md text-gray-700 mt-2">Percentage: 87.6</p>
+                    </div>
+                    <div class="card transform hover:scale-105">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Secondary School</h3>
+                        <p class="text-lg text-gray-600">Sri Chaitanya Techo School</p>
+                        <p class="text-md text-gray-500">May 2019 | Hyderabad, India</p>
+                        <p class="text-md text-gray-700 mt-2">CGPA: 9.0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1: Context-aware RAG-Chatbot -->
+                    <div class="project-card border-t-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-robot text-blue-500 text-3xl mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Context-aware RAG-Chatbot</h3>
+                        </div>
+                        <p class="text-blue-600 text-sm font-medium mb-3">Large Language Model, Lang Chain, ChromadB, Llama Index, Streamlit</p>
+                        <ul class="list-disc list-inside text-gray-700 text-sm flex-grow space-y-1">
+                            <li>Collected and processed large volume of documents with LLAMA, enhancing answer accuracy.</li>
+                            <li>Applied RAG approach with ChromaDB, accelerating information retrieval and improving UI/UX.</li>
+                            <li>Utilized Anaconda for efficient development and deployed with Streamlit for enhanced response time.</li>
+                            <li>Integrated feedback mechanism for optimization and incorporated contextual awareness.</li>
+                        </ul>
+                        <a href="https://github.com/pranavpip/Context-aware-RAG-Chatbot" target="_blank" class="text-blue-600 hover:underline mt-4 self-start">
+                            <i class="fab fa-github mr-1"></i> GitHub Link
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Multiagent AI Research Agent -->
+                    <div class="project-card border-t-4 border-purple-500">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-brain text-purple-500 text-3xl mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">Multiagent AI Research Agent</h3>
+                        </div>
+                        <p class="text-purple-600 text-sm font-medium mb-3">Meta Llama 3.3 8B, LangChain, Groq API, Tavily API</p>
+                        <ul class="list-disc list-inside text-gray-700 text-sm flex-grow space-y-1">
+                            <li>Designed a modular AI research system with agents for industry analysis, use case generation, AI recommendations, and cost-benefit evaluation.</li>
+                            <li>Leveraged Groq API for high-speed LLM inference and Tavily API for efficient real-time web searches.</li>
+                            <li>Enabled full AI research automation from market analysis to implementation planning and ROI assessment.</li>
+                            <li>Built a scalable and reusable pipeline using Meta Llama and LangChain.</li>
+                        </ul>
+                        <a href="https://github.com/pranavpip/Multiagent-AI-Research-Agent" target="_blank" class="text-purple-600 hover:underline mt-4 self-start">
+                            <i class="fab fa-github mr-1"></i> GitHub Link
+                        </a>
+                    </div>
+
+                    <!-- Project 3: AlumniConnect -->
+                    <div class="project-card border-t-4 border-green-500">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-users text-green-500 text-3xl mr-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800">AlumniConnect</h3>
+                        </div>
+                        <p class="text-green-600 text-sm font-medium mb-3">MERN Stack</p>
+                        <ul class="list-disc list-inside text-gray-700 text-sm flex-grow space-y-1">
+                            <li>Developed a responsive Alumni Network website, boosting user engagement through improved UI/UX design.</li>
+                            <li>Facilitated seamless user interaction, resulting in an increase in alumni connections and resource sharing.</li>
+                        </ul>
+                        <a href="https://github.com/pranavpip/AlumniConnect" target="_blank" class="text-green-600 hover:underline mt-4 self-start">
+                            <i class="fab fa-github mr-1"></i> GitHub Link
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-16 bg-gray-50">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-code mr-2 text-blue-500"></i> Languages & Frameworks</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>MERN Stack</li>
+                            <li>Tensorflow</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-database mr-2 text-green-500"></i> Databases & Tools</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>MySQL</li>
+                            <li>Git</li>
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>ChromaDB</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3"><i class="fas fa-book-open mr-2 text-purple-500"></i> Courses & Concepts</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>DBMS</li>
+                            <li>Machine Learning</li>
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                            <li>OOPS</li>
+                            <li>Deep Learning</li>
+                            <li>Computer Networks</li>
+                            <li>Operating Systems</li>
+                            <li>Cloud Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements and Extracurricular Section -->
+        <section id="achievements" class="py-16">
+            <div class="container">
+                <h2 class="section-title">Achievements & Extracurricular</h2>
+                <div class="card">
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><i class="fas fa-bullhorn mr-2 text-yellow-500"></i> Managing public relations of a club (RITI)</li>
+                        <li><i class="fas fa-users-cog mr-2 text-red-500"></i> Member, KMIT Students' Council: Helped in decision making during Events, solved student grievances and problems, organized events, and involved in decision making.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gradient-to-r from-indigo-700 to-blue-600 text-white py-16 rounded-t-3xl shadow-xl">
+            <div class="container text-center">
+                <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+                <p class="text-xl mb-4">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <p class="text-lg"><i class="fas fa-envelope mr-2"></i> Email: <a href="mailto:pranavpullepu@gmail.com" class="hover:underline">pranavpullepu@gmail.com</a></p>
+                    <p class="text-lg"><i class="fas fa-phone mr-2"></i> Phone: <a href="tel:+918978843656" class="hover:underline">+91 8978843656</a></p>
+                    <p class="text-lg"><i class="fab fa-linkedin mr-2"></i> LinkedIn: <a href="https://linkedin.com/in/pranav-pullepu" target="_blank" class="hover:underline">linkedin.com/in/pranav-pullepu</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center text-sm">
+        <div class="container">
+            <p>&copy; 2025 PVSSPRANAV. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
